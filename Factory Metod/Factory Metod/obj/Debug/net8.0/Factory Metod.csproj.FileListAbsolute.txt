@@ -1,0 +1,29 @@
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\bin\Debug\net8.0\appsettings.Development.json
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\bin\Debug\net8.0\appsettings.json
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\bin\Debug\net8.0\Factory_Metod.staticwebassets.runtime.json
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\bin\Debug\net8.0\Factory_Metod.exe
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\bin\Debug\net8.0\Factory_Metod.deps.json
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\bin\Debug\net8.0\Factory_Metod.runtimeconfig.json
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\bin\Debug\net8.0\Factory_Metod.dll
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\bin\Debug\net8.0\Factory_Metod.pdb
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\obj\Debug\net8.0\Factory Metod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\obj\Debug\net8.0\Factory Metod.AssemblyInfoInputs.cache
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\obj\Debug\net8.0\Factory Metod.AssemblyInfo.cs
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\obj\Debug\net8.0\Factory Metod.csproj.CoreCompileInputs.cache
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\obj\Debug\net8.0\Factory_Metod.MvcApplicationPartsAssemblyInfo.cache
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\obj\Debug\net8.0\staticwebassets.build.json
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\obj\Debug\net8.0\staticwebassets.development.json
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\obj\Debug\net8.0\staticwebassets\msbuild.Factory_Metod.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\obj\Debug\net8.0\staticwebassets\msbuild.build.Factory_Metod.props
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Factory_Metod.props
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Factory_Metod.props
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\obj\Debug\net8.0\scopedcss\bundle\Factory_Metod.styles.css
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\obj\Debug\net8.0\scopedcss\projectbundle\Factory_Metod.bundle.scp.css
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\obj\Debug\net8.0\Factory_Metod.dll
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\obj\Debug\net8.0\refint\Factory_Metod.dll
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\obj\Debug\net8.0\Factory_Metod.pdb
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\obj\Debug\net8.0\Factory Metod.genruntimeconfig.cache
+C:\Programación\Modelado - Patrones de diseño\Factory Metod\Factory Metod\obj\Debug\net8.0\ref\Factory_Metod.dll
