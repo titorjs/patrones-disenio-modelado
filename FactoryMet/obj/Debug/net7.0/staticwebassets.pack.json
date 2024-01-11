@@ -1,0 +1,89 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\FactoryMet\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\FactoryMet.bundle.scp.css",
+      "PackagePath": "staticwebassets\\FactoryMet.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\FactoryMet\\wwwroot\\BMW.jpg",
+      "PackagePath": "staticwebassets\\BMW.jpg"
+    },
+    {
+      "Id": "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\FactoryMet\\wwwroot\\LandRover.jpg",
+      "PackagePath": "staticwebassets\\LandRover.jpg"
+    },
+    {
+      "Id": "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\FactoryMet\\wwwroot\\Nissan.png",
+      "PackagePath": "staticwebassets\\Nissan.png"
+    },
+    {
+      "Id": "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\FactoryMet\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\FactoryMet\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\FactoryMet\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\FactoryMet\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\FactoryMet\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\FactoryMet\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\FactoryMet\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\FactoryMet\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\FactoryMet\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\FactoryMet\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\FactoryMet\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\FactoryMet\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\FactoryMet\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.FactoryMet.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.FactoryMet.props",
+      "PackagePath": "build\\FactoryMet.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.FactoryMet.props",
+      "PackagePath": "buildMultiTargeting\\FactoryMet.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.FactoryMet.props",
+      "PackagePath": "buildTransitive\\FactoryMet.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

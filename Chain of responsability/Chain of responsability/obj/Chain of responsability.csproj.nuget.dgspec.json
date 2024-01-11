@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Programación\\Modelado - Patrones de diseño\\Chain of responsability\\Chain of responsability\\Chain of responsability.csproj": {}
+    "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\EjemplosPatrones\\patrones-disenio-modelado\\Chain of responsability\\Chain of responsability\\Chain of responsability.csproj": {}
   },
   "projects": {
-    "C:\\Programación\\Modelado - Patrones de diseño\\Chain of responsability\\Chain of responsability\\Chain of responsability.csproj": {
+    "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\EjemplosPatrones\\patrones-disenio-modelado\\Chain of responsability\\Chain of responsability\\Chain of responsability.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Programación\\Modelado - Patrones de diseño\\Chain of responsability\\Chain of responsability\\Chain of responsability.csproj",
+        "projectUniqueName": "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\EjemplosPatrones\\patrones-disenio-modelado\\Chain of responsability\\Chain of responsability\\Chain of responsability.csproj",
         "projectName": "Chain_of_responsability",
-        "projectPath": "C:\\Programación\\Modelado - Patrones de diseño\\Chain of responsability\\Chain of responsability\\Chain of responsability.csproj",
-        "packagesPath": "C:\\Users\\titoj\\.nuget\\packages\\",
-        "outputPath": "C:\\Programación\\Modelado - Patrones de diseño\\Chain of responsability\\Chain of responsability\\obj\\",
+        "projectPath": "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\EjemplosPatrones\\patrones-disenio-modelado\\Chain of responsability\\Chain of responsability\\Chain of responsability.csproj",
+        "packagesPath": "C:\\Users\\TonyGku\\.nuget\\packages\\",
+        "outputPath": "D:\\UDLA Trabajos\\Semestre 5\\Modelado\\EjemplosPatrones\\patrones-disenio-modelado\\Chain of responsability\\Chain of responsability\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\titoj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\TonyGku\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -55,15 +55,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
