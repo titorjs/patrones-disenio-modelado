@@ -1,0 +1,83 @@
+﻿@page "/fetchdata"
+@using FactoryMet.Datos;
+@using FactoryMet.Servicios;-
+@using FactoryMet.Modelos;
+
+@inject ApplicationDbContext _db
+
+@code {
+  
+    public EnsamblajeCarroBMW ensamblajeBMW ;
+    public EnsamblajeCarroNissan ensamblajeCarroNissan;
+    public EnsamblajeCarroLandRover ensamblajeCarroLandRover;
+
+}
+
+<h3>Ensamblar Carro</h3>
+<div class="carro-container">
+    <img src="/Nissan.png" alt="" />
+    <p>Nissan</p>
+    <label for="tipoCarro">Seleccione el tipo de carro:</label>
+    <select id="tipoCarro">
+        <option value="manual">Manual</option>
+        <option value="compacto">Compacto</option>
+        <option value="automatico">Automático</option>
+    </select>
+</div>
+<button @onclick="PedirCarroN">Pedir Carros</button>
+<div class="carro-container">
+    <img src="/BMW.jpg" alt="" />
+    <p>BMW</p>
+    <label for="tipoCarro">Seleccione el tipo de carro:</label>
+    <select name="tipoCarro" @bind="valorSeleccionado">
+        <option value="manual">Manual</option>
+        <option value="compacto">Compacto</option>
+        <option value="automatico">Automático</option>
+    </select>
+</div>
+<button @onclick="PedirCarroB">Pedir Carros</button>
+<div class="carro-container">
+    <img src="/LandRover.jpg" alt="" />
+    <p>Land Rover</p>
+    <label for="tipoCarro">Seleccione el tipo de carro:</label>
+    <select name="tipoCarro" @bind="valorSeleccionado">
+        <option value="manual">Manual</option>
+        <option value="compacto">Compacto</option>
+        <option value="automatico">Automático</option>
+    </select>
+</div>
+<button @onclick="PedirCarroL">Pedir Carros</button>
+
+@code {
+    private string valorSeleccionado;
+    private void PedirCarroN()
+    {
+
+        var carro = new Carro
+            {
+                Modelo = "Nissan",
+                Tipo = valorSeleccionado
+            };
+        ensamblajeBMW.EnsamblarCarro(carro, valorSeleccionado);
+    }
+    private void PedirCarroB()
+    {
+
+        var carro = new Carro
+            {
+                Modelo = "BMW",
+                Tipo = valorSeleccionado
+            };
+        ensamblajeCarroNissan.EnsamblarCarro(carro, valorSeleccionado);
+    }
+    private void PedirCarroL()
+    {
+
+        var carro = new Carro
+            {
+                Modelo = "landRover",
+                Tipo = valorSeleccionado
+            };
+        ensamblajeCarroLandRover.EnsamblarCarro(carro, valorSeleccionado);
+    }
+}
