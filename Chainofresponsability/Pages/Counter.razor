@@ -1,0 +1,83 @@
+﻿@page "/counter"
+@using ChainofresponsabilityEj.Clases;
+
+<style>
+    .container {
+        max-width: 400px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+    .result {
+        margin-top: 16px;
+        font-weight: bold;
+    }
+</style>
+
+<PageTitle>Permisos</PageTitle>
+
+<h3 class="container">Pedir permiso</h3>
+
+<div class="container">
+    <label>Nivel de permiso:</label>
+    <input type="number" @bind="nivelPermiso" />
+    <button @onclick="Preguntar">Pedir Permiso</button>
+</div>
+
+<div class="container">
+    <label class="result">Resultado: @resultado</label>
+</div>
+
+@code {
+    private int nivelPermiso;
+    private IAprovacion aprovacion;
+    private string resultado;
+
+    protected override void OnInitialized()
+    {
+        // Configurar la cadena de manejadores
+        var mama = new Madre();
+        var papa = new Padre();
+        var cuidadora = new Cuidadora();
+
+        cuidadora.ProximoAprovador(papa);
+        papa.ProximoAprovador(mama);
+
+        aprovacion = cuidadora;
+    }
+
+    private void Preguntar()
+    {
+        var solicitud = new Solicitud(nivelPermiso);
+
+        resultado = aprovacion.SolicitudPermiso(solicitud);
+    }
+}

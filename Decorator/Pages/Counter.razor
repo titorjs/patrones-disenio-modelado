@@ -1,0 +1,83 @@
+﻿@page "/counter"
+@using DecoratorEj.Models
+
+<style>
+    .enemy-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .enemy-image {
+        width: 200px; /* Ajusta el tamaño según tus necesidades */
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .enemy-info {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .enemy-button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .enemy-button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<PageTitle>Enemigos</PageTitle>
+
+<h1>Enemigos</h1>
+
+<div class="enemy-container">
+    <img class="enemy-image" src="/Simple.jpeg" alt="Enemigo Normal" />
+    <div class="enemy-info">
+        <p>Vida: @enemigoNormal.Health</p>
+        <button class="enemy-button" @onclick="() => TakeDamage(enemigoNormal)">Atacar Enemigo Normal</button>
+    </div>
+</div>
+
+<div class="enemy-container">
+    <img class="enemy-image" src="/armor.jpg" alt="Enemigo con Armadura" />
+    <div class="enemy-info">
+        <p>Vida: @enemigoArmadura.Health</p>
+        <button class="enemy-button" @onclick="() => TakeDamage(enemigoArmadura)">Atacar Enemigo con Armadura</button>
+    </div>
+</div>
+
+<div class="enemy-container">
+    <img class="enemy-image" src="/helmet.jpg" alt="Enemigo con Casco" />
+    <div class="enemy-info">
+        <p>Vida: @enemigoCasco.Health</p>
+        <button class="enemy-button" @onclick="() => TakeDamage(enemigoCasco)">Atacar Enemigo con Casco</button>
+    </div>
+</div>
+
+<div class="enemy-container">
+    <img class="enemy-image" src="/both.jpg" alt="Enemigo con Casco y Armadura" />
+    <div class="enemy-info">
+        <p>Vida: @enemigoCascoArmadura.Health</p>
+        <button class="enemy-button" @onclick="() => TakeDamage(enemigoCascoArmadura)">Atacar Enemigo con Casco y Armadura</button>
+    </div>
+</div>
+
+@code {
+    private IEnemigo enemigoNormal = new Enemigo();
+    private IEnemigoDecorator enemigoArmadura = new EnemigoArmaduraDecorator(new Enemigo());
+    private IEnemigoDecorator enemigoCasco = new EnemigoCascoDecorator(new Enemigo());
+    private IEnemigoDecorator enemigoCascoArmadura = new EnemigoArmaduraDecorator(new EnemigoCascoDecorator(new Enemigo()));
+
+    private void TakeDamage(IEnemigo enemy)
+    {
+        enemy.TakeDamage(50);
+    }
+}
