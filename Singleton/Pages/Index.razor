@@ -1,0 +1,130 @@
+﻿@page "/"
+@using Singleton.Data
+@using Singleton.Modelo
+@inject Service service
+
+<h3>Proyecto Blazor</h3>
+
+<h4>Valor Global: @service.valorGlobal</h4>
+
+<div>
+    <h4>Añadir</h4>
+    <div>
+        <label for="valor">Valor:</label>
+        <input type="text" id="valor" @bind="valor" />
+
+        <label for="descripcion">Descripción:</label>
+        <input type="text" id="descripcion" @bind="descripcion" />
+
+        <button @onclick="AgregarItem">Agregar</button>
+    </div>
+
+    @if (resultadoAñadir != null)
+    {
+        <div>
+            <p>Resultado Añadir: @resultadoAñadir</p>
+        </div>
+    }
+</div>
+
+<div>
+    <h4>Consultar</h4>
+    <div>
+        <label for="idConsulta">ID:</label>
+        <input type="number" id="idConsulta" @bind="idConsulta" />
+
+        <button @onclick="ConsultarItem">Consultar</button>
+    </div>
+
+    @if (resultadoConsulta != null)
+    {
+        <div>
+            <p>Resultado Consulta: @resultadoConsulta</p>
+        </div>
+    }
+</div>
+
+<div>
+    <h4>Eliminar</h4>
+    <div>
+        <label for="idEliminar">ID:</label>
+        <input type="number" id="idEliminar" @bind="idEliminar" />
+
+        <button @onclick="EliminarItem">Eliminar</button>
+    </div>
+
+    @if (resultadoEliminar != null)
+    {
+        <div>
+            <p>Resultado Eliminar: @resultadoEliminar</p>
+        </div>
+    }
+</div>
+
+@code {
+    string valor;
+    string descripcion;
+    int idConsulta;
+    int idEliminar;
+    string resultadoAñadir;
+    string resultadoConsulta;
+    string resultadoEliminar;
+    Dato dato;
+
+    void AgregarItem()
+    {
+        dato = service.Add(
+            new Dato
+            {
+                Descripcion = descripcion,
+                Valor = valor
+            }
+        );
+        if(dato != null)
+        {
+            resultadoAñadir = $"Añadido: Id {dato.Id}, Valor {valor}, Descripción {descripcion}";
+        } else
+        {
+            resultadoAñadir = "Error al añadir X(";
+        }
+    }
+
+    void ConsultarItem()
+    {
+        dato = service.Get(idConsulta);
+        if(dato != null)
+        {
+            if(dato.Id >= 0)
+            {
+                resultadoConsulta = $"Consultado: Id {dato.Id}, Valor {valor}, Descripción {descripcion}";
+            } else
+            {
+                resultadoConsulta = "El dato no existe";
+            }
+        } else
+        {
+            resultadoConsulta = "Error al consultar X(";
+        }
+
+    }
+
+    void EliminarItem()
+    {
+        dato = service.Remove(idConsulta);
+        if (dato != null)
+        {
+            if (dato.Id >= 0)
+            {
+                resultadoEliminar = $"Eliminado: Id {dato.Id}, Valor {valor}, Descripción {descripcion}";
+            }
+            else
+            {
+                resultadoEliminar = "El dato no existe";
+            }
+        }
+        else
+        {
+            resultadoEliminar = "Error al consultar X(";
+        }
+    }
+}

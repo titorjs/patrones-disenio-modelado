@@ -1,0 +1,188 @@
+﻿@page "/"
+@using Memento.Model
+@using Memento.Data
+@using Microsoft.JSInterop
+@inject Service service
+
+<PageTitle>Index</PageTitle>
+
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 80%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+    textarea {
+        height: 200px; /* Ajusta esta altura según tus necesidades */
+        resize: vertical; /* Permite que el usuario redimensione verticalmente el textarea */
+    }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+
+<h2>Mini Editor</h2>
+
+<div>
+    <label for="id">ID:</label>
+    <input type="number" id="id" @bind="id">
+</div>
+
+<div>
+    <label for="titulo">Título:</label>
+    <input type="text" id="titulo" @bind="titulo">
+</div>
+
+<div>
+    <label for="cuerpo">Cuerpo:</label>
+    <textarea id="cuerpo" @bind="cuerpo"></textarea>
+</div>
+
+<div class="button-container">
+    <button @onclick="buscar">Buscar</button>
+    <button @onclick="agregar">Agregar</button>
+    <button @onclick="eliminar">Eliminar</button>
+    <button @onclick="reponer">Reponer</button>
+    <button @onclick="guardar">Guardar</button>
+</div>
+
+<div>
+    <h5>@info</h5>
+</div>
+
+
+@code{
+    int id;
+    string titulo;
+    string cuerpo;
+    string info;
+    Dato dato;
+
+    void buscar()
+    {
+
+        dato = service.buscar(id);
+        if(dato == null)
+        {
+            info = "Info: El dato ingresado no existe";
+            return;
+        }
+        id = dato.Id;
+        titulo = dato.Titulo;
+        cuerpo = dato.Cuerpo;
+    }
+
+    void agregar()
+    {
+        dato = service.agregar(
+            new Dato
+            {
+                Titulo = titulo,
+                Cuerpo = cuerpo
+            }
+        );
+
+        if(dato != null)
+        {
+            info = $"Info: valor creado correctamente, id {dato.Id}";
+        }
+        else
+        {
+            info = "Info: valor no creado X(";
+        }
+    }
+
+    void eliminar()
+    {
+        bool el = service.eliminar(id);
+        if (el)
+        {
+            id = 0;
+            titulo = "";
+            cuerpo = "";
+            info = "Info: se eliminó correctamente";
+        } else
+        {
+            info = "Info: no se eliminó X(";
+        }
+    }
+
+    void reponer()
+    {
+        dato = service.rollBack(id);
+        if(dato != null)
+        {
+            if(dato.Id == -1)
+            {
+                info = "Info: ya se encuentra en la última versión :)";
+            } else
+            {
+                info = "Info: Revertido correctamente";
+                titulo = dato.Titulo;
+                cuerpo = dato.Cuerpo;
+            }
+        } else
+        {
+            info = "Info: no se encontró su dato :(";
+        }
+    }
+    void guardar()
+    {
+        bool el = service.backUp(
+            new Dato
+            {
+                Id = id,
+                Titulo = titulo,
+                Cuerpo = cuerpo
+            }
+        );
+
+        if (el)
+        {
+            info = "Info: backup realizado con éxito";
+        } else
+        {
+            info = "Info: no se puedo realizar backup";
+        }
+    }
+}

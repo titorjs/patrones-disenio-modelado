@@ -1,0 +1,22 @@
+﻿@page "/counter"
+@using Singleton.Data
+@inject Service service
+
+<h1> VALOR GLOBAL</h1>
+<div>
+    <h4>Valor Global: @service.valorGlobal</h4>
+    <div>
+        <label for="global">ID:</label>
+        <input type="text" id="global" @bind="global" />
+
+        <button @onclick="cambiarGlobal">Cambiar global</button>
+    </div>
+</div>
+
+@code{
+    string global;
+
+    void cambiarGlobal(){
+        service.valorGlobal = global;
+    }
+}
